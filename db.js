@@ -16,8 +16,4 @@ client.connect((err) => {
     console.log("Connect to PostgreSQL successfully!")
 })
 
-<<<<<<< HEAD
 module.exports = client;
-=======
-module.exports = client;
->>>>>>> 8cb19326f8a45663099305e0933949715d9d2a7e
