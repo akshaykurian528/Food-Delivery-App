@@ -41,10 +41,5 @@ app.listen(PORT, () => {
 
 
 app.get('/', (req, res) => {
-    res.send('Welcome to the Food Delivery API');
-});
-
-
-app.get('/', (req, res) => {
-    res.redirect('/api-docs'); // Redirect to Swagger documentation
+    res.redirect('/api-docs'); 
 });
