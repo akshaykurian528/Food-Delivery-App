@@ -3,10 +3,19 @@ const bodyParser = require('body-parser');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 const pricingRoutes = require('./routes/pricing');
+const dotenv = require('dotenv');
+const cors = require('cors');
+
+dotenv.config();
+
 
 const app = express();
 
+app.use(cors());
+
 app.use(bodyParser.json());
+
+
 
 // Swagger setup
 const swaggerOptions = {
@@ -36,10 +45,5 @@ app.use('/api/pricing', pricingRoutes);
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
-
-
-app.get('/', (req, res) => {
-    res.redirect('/api-docs'); 
+    console.log(Server is running on port ${PORT});
 });
