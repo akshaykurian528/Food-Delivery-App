@@ -1,12 +1,19 @@
-// db.js
-const { Pool } = require('pg');
+var pool = require("pg");
 
-const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'Food',
-    password: 'root',
-    port: 5432, // Default PostgreSQL port
+var client = new pool.Client({
+    user: "food_rnc7_user",
+    password: "WFamRhy1jFgGMVD49aZkURC6MeXvjnw6",
+    database: "food_rnc7",
+    port: 5432,
+    host: "dpg-co4jdccf7o1s738svflg-a.singapore-postgres.render.com",
+    ssl: true
 });
 
-module.exports = pool;
+
+
+client.connect((err) => {
+    if (err) throw err
+    console.log("Connect to PostgreSQL successfully!")
+})
+
+module.exports = client;
