@@ -3,10 +3,7 @@ const bodyParser = require('body-parser');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 const pricingRoutes = require('./routes/pricing');
-const dotenv = require('dotenv');
 const cors = require('cors');
-
-dotenv.config();
 
 
 const app = express();
